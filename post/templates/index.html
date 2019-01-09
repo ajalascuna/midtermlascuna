@@ -11,6 +11,9 @@ this is the index page
   <li>
     <a href="{% url 'post:detail' post.id %}"> {{ post.title }} <br />
   </li>
+
   {% endfor %}
   </ol>
+  <a class="btn btn-primary" href="http://127.0.0.1:8000/admin/post/post/add/">Create a new post</a>
+
 {% endblock %}
