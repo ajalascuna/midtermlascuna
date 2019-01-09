@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+this is the index page
+{% endblock %}
+
+
+{% block body %}
+  <center>
+  {{ post.title }} <br /><br />
+  Date Created: {{ post.date_created }} <br />
+  Date Updated: {{ post.date_updated }} <br /><br />
+  {{ post.content }} <br /><br />
+
+  Comments: <br />
+    {% for comment in post.comments.all %}
+      {{ comment.comment_text }} <br />
+    {% endfor %}
+
+  </center>
+{% endblock %}
